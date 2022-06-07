@@ -1,0 +1,933 @@
+:root {
+  --primary: #8e7bef;
+  --secondary: #5d3cef;
+  --smoke: #f6f6ff;
+  --third: #f1ecfc;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Montserrat", sans-serif;
+  background-color: var(--smoke);
+  scroll-behavior: smooth;
+}
+
+.container {
+  max-width: 1280px;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+}
+
+.name {
+  color: #4d4d4d;
+  font-size: 28px;
+  text-transform: uppercase;
+  padding-right: 20px;
+}
+
+.menu-desktop a:nth-child(1) {
+  color: var(--primary);
+}
+
+.drop-down {
+  display: block;
+  position: relative;
+  z-index: 1;
+  user-select: none;
+  appearance: none;
+  border: none;
+  outline: none;
+  background: none;
+  cursor: pointer;
+}
+
+.drop-down span {
+  display: none;
+  width: 32px;
+  height: 4px;
+  margin-bottom: 5px;
+  position: relative;
+  background-color: #808080;
+  border-radius: 6px;
+  z-index: 1;
+  transform-origin: 0 0;
+  transition: 0.4s;
+}
+.menu-desktop {
+  display: flex;
+  flex: 1 1 0%;
+  justify-content: flex-end;
+  margin: 0 -16px;
+}
+
+.mobile-menu {
+  display: none;
+}
+
+.mobile-active a {
+  width: 100%;
+  padding: 1rem 0;
+  display: block;
+  text-align: center;
+  text-decoration: none;
+  color: #808080;
+  margin: 0.5rem auto;
+}
+
+.mobile-active a:hover {
+  background-color: var(--primary);
+  color: white;
+}
+
+.menu-desktop a {
+  color: #808080;
+  font-weight: 600;
+  text-decoration: none;
+  transition: 0.4s;
+  padding: 8px 16px;
+}
+
+.menu-desktop a.is-active,
+.menu-desktop a:hover {
+  color: var(--primary);
+  display: block;
+}
+
+.footer{
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+  text-align: center;
+  color:#8773EE;
+}
+
+/*Mobile xs*/
+@media only screen and (min-width: 1px) and (max-width: 375px) {
+
+  nav {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 99;
+    padding: 16px 10px;
+  }
+
+  .menu-desktop {
+    display: none;
+  }
+
+  .mobile-active {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding-top: 5rem;
+    width: 100%;
+    height: 100vh;
+  }
+
+  .drop-down span {
+    display: block;
+  }
+
+  .firstInfo {
+    padding: 60px 30px 10px 20px;
+  }
+
+  .firstInfo p{
+    margin-top: 10px;
+  }
+
+  .FirstDiv {
+    text-align: center;
+    background-image: url(../img/lineas-portafolio-01.svg);
+    background-repeat: no-repeat;
+    position: relative;
+  }
+
+  .FirstDiv img {
+    width: 70%;
+    background: none;
+    padding-bottom: 20px;
+  }
+
+  .networks {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-items: flex;
+    background: none;
+    padding-left: 45px;
+    padding-right: 45px;
+    position: relative;
+    top: -50px;
+  }
+
+  .firstInfo .networks{
+    display: none;
+  }
+
+  .networks a {
+    background: none;
+  }
+
+  .networks img {
+    background-color: var(--primary);
+    border-radius: 100px;
+    width: 45px;
+    padding: 2px;
+    border: 2px solid var(--smoke);
+  }
+
+  h2 {
+    text-align: center;
+    margin-top: 40px;
+    padding-top: 15px;
+  }
+
+  .contact {
+    padding: 10px;
+    margin: 10px 20px;
+    color: white;
+    background-color: var(--secondary);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .firstInfo .contact{
+    display: none;
+  }
+
+  .contact p {
+    background-color: var(--secondary);
+    text-align: center;
+    padding-left: 9px;
+  }
+
+  .contact img {
+    background: none;
+    border: none;
+    width: 20px;
+    height: 20px;
+    justify-content: center;
+    align-items: center;
+    padding: 0;
+  }
+
+  .about p {
+    margin: 10px 20px;
+    justify-content: baseline;
+    text-align: center;
+  }
+
+  .cards {
+    display: flex;
+    overflow-x: auto;
+    min-height: 200px;
+  }
+
+  .CardOne {
+    background-color: var(--third);
+    min-width: 200px;
+    margin: 10px;
+    font-size: small;
+    padding: 10px;
+  }
+
+  .cardTitle {
+    background-color: var(--third);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 4.5rem;
+  }
+
+  .CardOne img {
+    width: 40px;
+    background: none;
+    margin: 0;
+    padding-right: 5px;
+  }
+
+  .CardOne h3 {
+    background-color: var(--third);
+  }
+
+  .CardOne p {
+    background-color: var(--third);
+    padding-top: 5px;
+  }
+
+  .ExperienceCardJob {
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    margin: 20px;
+  }
+
+  .ExperienceCardJob img {
+    width: 80px;
+  }
+
+  .PortafolioCards {
+    display: block;
+    text-align: center;
+    padding: 20px;
+  }
+
+  .PortafolioCards img {
+    width: 80%;
+    height: 50%;
+  }
+
+  .contactInfo {
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    margin: 20px;
+  }
+
+  .PhoneContact,
+  .MailContact {
+    text-align: center;
+  }
+
+  .MailContact img,
+  .PhoneContact img {
+    background-color: var(--third);
+    border-radius: 50px;
+  }
+}
+
+/*Mobile*/
+@media only screen and (min-width: 376px) and (max-width: 765px) {
+
+  nav {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 99;
+    padding: 16px 10px;
+  }
+
+  .menu-desktop {
+    display: none;
+  }
+
+  .mobile-active {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding-top: 5rem;
+    width: 100%;
+    height: 100vh;
+  }
+
+  .drop-down span {
+    display: block;
+  }
+
+  .firstInfo {
+    padding: 60px 30px 10px 20px;
+  }
+
+  .firstInfo p{
+    margin-top: 10px;
+  }
+
+  .FirstDiv {
+    text-align: center;
+    background-image: url(../img/lineas-portafolio-01.svg);
+    background-repeat: no-repeat;
+    position: relative;
+  }
+
+  .FirstDiv img {
+    width: 70%;
+    background: none;
+    padding-bottom: 20px;
+  }
+
+  .firstInfo .networks{
+    display: none;
+  }
+
+  .networks {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-items: flex;
+    background: none;
+    padding-left: 45px;
+    padding-right: 45px;
+    position: relative;
+    top: -50px;
+  }
+
+  .networks a {
+    background: none;
+  }
+
+  .networks img {
+    background-color: var(--primary);
+    border-radius: 100px;
+    width: 45px;
+    padding: 2px;
+    border: 2px solid var(--smoke);
+  }
+
+  h2 {
+    text-align: center;
+    margin-top: 40px;
+    padding-top: 15px;
+  }
+
+  .contact {
+    padding: 10px;
+    margin: 10px 20px;
+    color: white;
+    background-color: var(--secondary);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .firstInfo .contact{
+    display: none;
+  }
+
+  .contact p {
+    background-color: var(--secondary);
+    text-align: center;
+    padding-left: 9px;
+  }
+
+  .contact img {
+    background: none;
+    border: none;
+    width: 20px;
+    height: 20px;
+    align-items: center;
+    padding: 0;
+  }
+
+  .about p {
+    margin: 10px 20px;
+    justify-content: baseline;
+    text-align: center;
+  }
+
+  .cards {
+    display: flex;
+    overflow-x: auto;
+    min-height: 200px;
+
+  }
+
+  .cardsoverflow{
+    overflow-x: auto;
+  }
+
+  .CardOne {
+    background-color: var(--third);
+    min-width: 200px;
+    margin: 10px;
+    font-size: small;
+    padding: 10px;
+  }
+
+  .cardTitle {
+    background-color: var(--third);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 4.5rem;
+  }
+
+  .CardOne img {
+    width: 40px;
+    background: none;
+    margin: 0;
+    padding-right: 5px;
+  }
+
+  .CardOne h3 {
+    background-color: var(--third);
+  }
+
+  .CardOne p {
+    background-color: var(--third);
+    padding-top: 5px;
+  }
+
+  .ExperienceCardJob {
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    margin: 20px;
+  }
+
+  .ExperienceCardJob img {
+    width: 80px;
+  }
+
+  .PortafolioCards {
+    display: block;
+    text-align: center;
+    padding: 20px;
+  }
+
+  .PortafolioCards img {
+    width: 80%;
+    height: 50%;
+  }
+
+  .contactInfo {
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    margin: 20px;
+  }
+
+  .PhoneContact,
+  .MailContact {
+    text-align: center;
+  }
+
+  .MailContact img,
+  .PhoneContact img {
+    background-color: var(--third);
+    border-radius: 50px;
+  }
+}
+
+/*Tablet*/
+@media only screen and (min-width: 766px) and (max-width: 929px) {
+
+  nav {
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 99;
+    padding: 16px 10px;
+  }
+
+  body{
+    display: block;
+  }
+
+  .firstContainer{
+    display:flex;
+    flex-direction: row-reverse;
+    max-width: 1200px;
+  }
+
+  .firstInfo {
+    padding: 10px 30px 10px 20px;
+    width: 50%;
+  }
+
+  .firstInfo p{
+    margin-top: 20px;
+  }
+
+  .FirstDiv {
+    width: 50%;
+    text-align: center;
+    background-image: url(../img/lineas-portafolio-01.svg);
+    background-repeat: no-repeat;
+    justify-content: center;
+  }
+
+  .FirstDiv img {
+    width: 60%;
+    background: none;
+  }
+
+  .FirstDiv .networks{
+    display: none;
+  }
+
+  .networks {
+    justify-content: space-around;
+    background: none;
+    padding-left: 45px;
+    padding-right: 45px;
+    display: flex;
+    margin: 0px 150px;
+    margin-top: 10px;
+    bottom: 0;
+    left: 0;
+    right: 0;
+  }
+
+  .networks a {
+    background: none;
+    margin: 0px 10px;
+    margin-top: 5px;
+  }
+
+  .networks img {
+    background-color: var(--primary);
+    border-radius: 100px;
+    width: 45px;
+    padding: 2px;
+    border: 2px solid var(--smoke);
+  }
+
+  h2 {
+    text-align: center;
+    margin-top: 40px;
+    padding-top: 15px;
+  }
+
+  .contact {
+    padding: 10px;
+    margin: 10px 20px;
+    color: white;
+    background-color: var(--secondary);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .FirstDiv .contact{
+    display: none;
+  }
+
+  .contact p {
+    background-color: var(--secondary);
+    text-align: center;
+    justify-content: center;
+    justify-items: center;
+    margin: 0;
+    padding-left: 9px;
+  }
+
+  .contact img {
+    background: none;
+    border: none;
+    width: 20px;
+    height: 20px;
+    align-items: center;
+    padding: 0;
+  }
+
+  .about p {
+    margin: 10px 150px;
+    justify-content: baseline;
+    text-align: center;
+  }
+
+  .myabilities{
+    margin: 10px 150px;
+  }
+
+  .cards {
+    display: flex;
+  }
+
+  .CardOne {
+    background-color: var(--third);
+    width: 49%;
+    margin: 10px;
+    font-size: small;
+    padding: 10px;
+  }
+
+  .cardTitle {
+    background-color: var(--third);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 4.5rem;
+  }
+
+  .CardOne img {
+    width: 40px;
+    background: none;
+    margin: 0;
+    padding-right: 5px;
+  }
+
+  .CardOne h3 {
+    background-color: var(--third);
+  }
+
+  .CardOne p {
+    background-color: var(--third);
+    padding-top: 5px;
+  }
+
+  .experienceCards{
+    display: inline-flex;
+  }
+  .ExperienceCardJob {
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    margin: 20px;
+  }
+
+  .ExperienceCardJob p{
+    margin: 10px;
+  }
+  
+  .ExperienceCardJob img {
+    width: 80px;
+  }
+
+  .PortafolioCards {
+    display: block;
+    text-align: center;
+    padding: 20px;
+    margin: 10px 50px;
+  }
+
+  .PortafolioCards img {
+    width: 30%;
+    height: 300px;
+    padding: 10px;
+  }
+
+  .contactInfo {
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    margin: 20px;
+  }
+
+  .PhoneContact,
+  .MailContact {
+    text-align: center;
+  }
+
+  .MailContact img,
+  .PhoneContact img {
+    background-color: var(--third);
+    border-radius: 50px;
+  }
+}
+
+/*Desktop*/
+@media only screen and (min-width: 930px) {
+
+  nav {
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 99;
+    padding: 16px 10px;
+  }
+
+  body{
+    display: block;
+  }
+
+  .firstContainer{
+    display: flex;
+    flex-direction: row-reverse;
+    max-width: 1200px;
+  }
+
+  .firstInfo {
+    padding: 10px 30px 10px 20px;
+    width: 50%;
+    margin-top: 30px;
+  }
+
+  .firstInfo p{
+    margin-top: 20px;
+  }
+
+  .FirstDiv {
+    width: 50%;
+    text-align: center;
+    background-image: url(../img/lineas-portafolio-01.svg);
+    background-repeat: no-repeat;
+    justify-content: center;
+  }
+
+  .FirstDiv img {
+    width: 60%;
+    background: none;
+  }
+
+  .networks {
+    justify-content: space-around;
+    background: none;
+    padding-left: 45px;
+    padding-right: 45px;
+    display: flex;
+    margin: 0px 150px;
+    bottom: 0;
+    left: 0;
+    right: 0;
+  }
+
+  .FirstDiv .networks{
+    display: none;
+  }
+
+  .networks a {
+    background: none;
+    margin: 0px 10px;
+    margin-top: 10px;
+  }
+
+  .experienceCards{
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    padding-left: 10%;
+    justify-items: center;
+  }
+
+  .ExperienceCardJob p{
+    margin: 10px;
+  }
+
+  .networks img {
+    background-color: var(--primary);
+    border-radius: 100px;
+    width: 45px;
+    padding: 2px;
+    border: 2px solid var(--smoke);
+  }
+
+  h2 {
+    text-align: center;
+    margin-top: 40px;
+    padding-top: 15px;
+  }
+
+  .contact {
+    padding: 10px;
+    margin: 10px 20px;
+    color: white;
+    background-color: var(--secondary);
+    align-items: center;
+    justify-content: center;
+    display: flex;
+  }
+
+  .FirstDiv .contact{
+    display: none;
+  }
+
+  .contact p {
+    background-color: var(--secondary);
+    text-align: center;
+    margin: 0;
+  }
+
+  .contact img {
+    padding-right: 20px;
+    background: none;
+    border: none;
+    width: 40px;
+  }
+
+  .about p {
+    margin: 10px 150px;
+    justify-content: baseline;
+    text-align: center;
+  }
+
+  .myabilities{
+    margin: 10px 150px;
+  }
+
+  .cards {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .CardOne {
+    background-color: var(--third);
+    width: 46%;
+    margin: 10px;
+    font-size: small;
+    padding: 10px;
+  }
+
+  .CardOne p{
+    text-align: center;
+  }
+
+  .cardTitle {
+    background-color: var(--third);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 4.5rem;
+  }
+
+  .CardOne img {
+    width: 40px;
+    background: none;
+    margin: 0;
+    padding-right: 5px;
+  }
+
+  .CardOne h3 {
+    background-color: var(--third);
+  }
+
+  .CardOne p {
+    background-color: var(--third);
+    padding-top: 5px;
+  }
+
+  .ExperienceCardJob {
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    margin: 20px;
+  }
+
+  .ExperienceCardJob img {
+    width: 80px;
+  }
+
+  .PortafolioCards {
+    display: block;
+    text-align: center;
+    padding: 20px;
+    margin: 10px 100px;
+  }
+
+  .PortafolioCards img {
+    width: 30%;
+    height: 300px;
+    padding: 10px;
+  }
+
+  .contactInfo {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-evenly;
+    margin: 20px;
+  }
+
+  .PhoneContact,
+  .MailContact {
+    text-align: center;
+  }
+
+  .MailContact img,
+  .PhoneContact img {
+    background-color: var(--third);
+    border-radius: 50px;
+  }
+}
+
